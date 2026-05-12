@@ -8,7 +8,7 @@ app.use(express.json());
 
 // Connect to SQLite database file
 // If file does not exist, it will be created automatically
-const db = new sqlite3.Database("./tasks.db", (err) => {
+const db = new sqlite3.Database("/app/data/tasks.db", (err) => {
   if (err) {
     console.error("Error opening database:", err.message);
   } else {
